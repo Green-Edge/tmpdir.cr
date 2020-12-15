@@ -47,7 +47,7 @@ end
 # tmp_dir does not exists anymore
 ```
 
-The solution uses the `LibC.mkdtemp` bind. 
+The solution uses the `LibC.mkdtemp` bind.
 The mkdtemp function creates a directory with a unique name. If it
 succeeds, it overwrites template with the name of the directory, and
 returns template. As with mktemp and mkstemp, template should be a

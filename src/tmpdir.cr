@@ -16,7 +16,7 @@ class Dir
 
     fileno = LibC.mkdtemp(tmp_dir)
     if fileno == nil
-      raise Errno.new("mkdtemp")
+      raise "mkdtemp failed"
     end
 
     tmp_dir
@@ -61,7 +61,7 @@ class Tempfile < IO::FileDescriptor
     @path = File.join(Dir.tmpdir, "#{name}.XXXXXX")
     fileno = LibC.mkstemp(@path)
     if fileno == -1
-      raise Errno.new("mkstemp")
+      raise "mkstemp failed"
     end
     super(fileno, blocking: true)
   end
