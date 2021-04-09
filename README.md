@@ -1,5 +1,7 @@
 # tmpdir.cr
-> [Temporary Monkey Patch](https://github.com/crystal-lang/crystal/pull/2911) solution to create temporary directories with Crystal
+> [Temporary Monkey Patch](https://github.com/crystal-lang/crystal/pull/2911) solution to create temporary directories with Crystal.
+
+Forked from [marceloboeira/tmpdir.cr](https://github.com/marceloboeira/tmpdir.cr) to address small issues with recent releases of Crystal.
 
 ## Installation
 
@@ -8,14 +10,12 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   tmpdir:
-    github: marceloboeira/tmpdir.cr
+    github: Green-Edge/tmpdir.cr
 ```
 
 ## Usage
 
-Require the library
-
-Then:
+Require the library, then...
 
 Without prefix:
 
@@ -55,3 +55,10 @@ string ending with ‘XXXXXX’.
 
 Reference:
 - http://www.gnu.org/software/libc/manual/html_node/Temporary-Files.html
+
+
+## Testing
+
+```shell
+$ crystal spec
+```
